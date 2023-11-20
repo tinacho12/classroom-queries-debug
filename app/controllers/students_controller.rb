@@ -7,7 +7,7 @@ class StudentsController < ApplicationController
 
   def show
     the_id = params.fetch("path_id")
-    @student = Student.where({:id => the_id }).at(0)
+    @student = Student.where({ :id => the_id }).at(0)
 
     render({ :template => "students/show" })
   end
